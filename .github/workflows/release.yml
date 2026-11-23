@@ -58,13 +58,18 @@ jobs:
           chmod +x appimagetool
           ARCH=x86_64 ./appimagetool --appimage-extract-and-run AppDir "OpenMusic-$VERSION-x86_64.AppImage"
       - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: check-linux
+          path: |
+            smoke-linux.png
+            smoke-linux.log
+      - uses: actions/upload-artifact@v4
         with:
           name: linux
           path: |
             OpenMusic-*.AppImage
             OpenMusic-*.tar.gz
-            smoke-linux.png
-            smoke-linux.log
 
   windows:
     runs-on: windows-latest
@@ -102,9 +107,11 @@ jobs:
         run: |
           export OPENMUSIC_INTRO=0 OPENMUSIC_SMOKE="$PWD/smoke-windows.png" OPENMUSIC_LOG="$PWD/smoke-windows.log" OPENMUSIC_SMOKE_MS=25000
           export OPENMUSIC_SMOKE_TRACK="$SMOKE_TRACK"
-          timeout 180 dist/OpenMusic/OpenMusic.exe || echo "exit code $?"
+          code=0; timeout 180 dist/OpenMusic/OpenMusic.exe || code=$?
           cat smoke-windows.log || true
+          echo "exit code $code"
           test -s smoke-windows.png
+          test "$code" = 0
       - name: Archive
         run: Compress-Archive -Path dist/OpenMusic -DestinationPath "OpenMusic-$env:VERSION-windows-x64.zip"
       - name: Installer
@@ -113,13 +120,18 @@ jobs:
           & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" "/DVersion=$env:VERSION" packaging\windows\OpenMusic.iss
           Move-Item dist\OpenMusic-*-windows-setup.exe .
       - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: check-windows
+          path: |
+            smoke-windows.png
+            smoke-windows.log
+      - uses: actions/upload-artifact@v4
         with:
           name: windows
           path: |
             OpenMusic-*-windows-setup.exe
             OpenMusic-*-windows-x64.zip
-            smoke-windows.png
-            smoke-windows.log
 
   release:
     needs: [linux, windows]
@@ -130,6 +142,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           path: out
+          pattern: "{linux,windows}"
       - name: Draft release
         env:
           GH_TOKEN: ${{ github.token }}

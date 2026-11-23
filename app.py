@@ -119,6 +119,12 @@ def main():
             QTimer.singleShot(1500, play)
         QTimer.singleShot(int(os.environ.get("OPENMUSIC_SMOKE_MS", "7000")), seen)
     code = app.exec()
+    if sys.platform == "win32":
+        # On Windows taking the scene and the threads apart crashes the process on its way out (the
+        # build check caught it). Everything is saved by now, so the process simply ends.
+        if log:
+            log.flush()
+        os._exit(code)
     # Left for interpreter shutdown, the scene crashes Qt on Wayland when PySide tears it down.
     delete(engine)
     return code

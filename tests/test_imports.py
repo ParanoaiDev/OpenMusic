@@ -10,6 +10,7 @@ from pathlib import Path
 from unittest.mock import patch
 from urllib.error import HTTPError, URLError
 from urllib.parse import unquote, urlsplit
+from urllib.request import url2pathname
 
 import apple
 import deezer
@@ -398,7 +399,7 @@ class Folder(unittest.TestCase):
     def test_link_is_a_file_address_that_leads_back_to_the_file(self):
         entries, _ = local.folder(self.folder)
         self.assertTrue(entries[1].url.startswith("file:///"))
-        self.assertEqual(Path(unquote(urlsplit(entries[1].url).path)), self.folder / "a/03. Portishead - Roads.MP3")
+        self.assertEqual(Path(url2pathname(urlsplit(entries[1].url).path)), self.folder / "a/03. Portishead - Roads.MP3")
 
     def test_failures(self):
         with self.assertRaisesRegex(ImportFailed, "Выберите папку"):

@@ -9,6 +9,7 @@ import tools
 from concurrent.futures import ThreadPoolExecutor, wait
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+from urllib.request import url2pathname
 
 from library import Entry, ImportFailed, artist_and_title, https_url, text
 
@@ -135,7 +136,8 @@ def place(target, base):
     (None, link) with the https address the row gives, if any."""
     if re.match(r"[a-zA-Z][a-zA-Z0-9+.-]+://", target) and not target.lower().startswith("file://"):
         return None, https_url(target)
-    name = unquote(urlsplit(target).path) if target.lower().startswith("file://") else target
+    # A file address is turned into a path the way the system writes it: /C:/Music/a.mp3 is C:\Music\a.mp3 on Windows.
+    name = url2pathname(urlsplit(target).path) if target.lower().startswith("file://") else target
     for variant in (name, name.replace("\\", "/")):
         try:
             file = (base / variant).resolve()
