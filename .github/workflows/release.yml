@@ -45,6 +45,7 @@ jobs:
           xvfb-run -a -s "-screen 0 1600x1000x24" timeout 180 dist/OpenMusic/OpenMusic
           cat smoke-linux.log
           test -s smoke-linux.png
+          grep -q "playing=True" smoke-linux.log
       - name: Archive
         run: tar -C dist -czf "OpenMusic-$VERSION-linux-x86_64.tar.gz" OpenMusic
       - name: AppImage
@@ -57,6 +58,19 @@ jobs:
           curl -fsSL -o appimagetool https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
           chmod +x appimagetool
           ARCH=x86_64 ./appimagetool --appimage-extract-and-run AppDir "OpenMusic-$VERSION-x86_64.AppImage"
+      - name: Check the AppImage where the system has no certificates of its own
+        run: |
+          sudo mv /etc/ssl/certs /etc/ssl/certs.away
+          sudo mv /usr/lib/ssl/certs /usr/lib/ssl/certs.away 2>/dev/null || true
+          export XDG_DATA_HOME="$RUNNER_TEMP/data2" OPENMUSIC_INTRO=0 QT_QPA_PLATFORM=xcb
+          export OPENMUSIC_SMOKE="$PWD/smoke-appimage.png" OPENMUSIC_LOG="$PWD/smoke-appimage.log" OPENMUSIC_SMOKE_MS=25000
+          export OPENMUSIC_SMOKE_TRACK="$SMOKE_TRACK"
+          code=0; xvfb-run -a -s "-screen 0 1600x1000x24" timeout 180 ./OpenMusic-$VERSION-x86_64.AppImage --appimage-extract-and-run || code=$?
+          sudo mv /etc/ssl/certs.away /etc/ssl/certs
+          sudo mv /usr/lib/ssl/certs.away /usr/lib/ssl/certs 2>/dev/null || true
+          cat smoke-appimage.log
+          test "$code" = 0
+          grep -q "playing=True" smoke-appimage.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -64,6 +78,7 @@ jobs:
           path: |
             smoke-linux.png
             smoke-linux.log
+            smoke-appimage.log
       - uses: actions/upload-artifact@v4
         with:
           name: linux
@@ -112,6 +127,7 @@ jobs:
           echo "exit code $code"
           test -s smoke-windows.png
           test "$code" = 0
+          grep -q "playing=True" smoke-windows.log
       - name: Archive
         run: Compress-Archive -Path dist/OpenMusic -DestinationPath "OpenMusic-$env:VERSION-windows-x64.zip"
       - name: Installer

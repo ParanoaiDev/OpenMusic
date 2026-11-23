@@ -15,7 +15,7 @@ a = Analysis(
     [os.path.join(ROOT, "app.py")],
     pathex=[ROOT],
     datas=datas,
-    hiddenimports=["yt_dlp", "numpy", "effects", "waveform", "mixes", "similar", "PySide6.QtDBus"],
+    hiddenimports=["yt_dlp", "numpy", "certifi", "effects", "waveform", "mixes", "similar", "PySide6.QtDBus"],
     excludes=["tkinter", "unittest", "pydoc", "PySide6.QtWebEngineCore", "PySide6.QtWebEngineWidgets", "PySide6.QtWebEngineQuick",
               "PySide6.Qt3DCore", "PySide6.QtCharts", "PySide6.QtDataVisualization", "PySide6.QtGraphs", "PySide6.QtQuick3D",
               "PySide6.QtPdf", "PySide6.QtLocation", "PySide6.QtPositioning", "PySide6.QtSensors", "PySide6.QtTest"],

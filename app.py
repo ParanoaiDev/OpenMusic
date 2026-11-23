@@ -14,7 +14,7 @@ from shiboken6 import delete
 from library import Library
 
 ROOT = Path(__file__).resolve().parent
-VERSION = "0.9.0"
+VERSION = "0.9.1"
 
 
 def fonts():
@@ -53,6 +53,15 @@ def main():
         try:                                    # its own button on the taskbar, with its own icon
             ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("OpenMusic.OpenMusic")
         except (AttributeError, OSError):
+            pass
+    if getattr(sys, "frozen", False):
+        # A build carries its own Python, and that Python looks for the root certificates where the
+        # system it was built on keeps them: on another Linux nothing would be there and every secure
+        # connection would fail. The build has its own set, and says where it is.
+        try:
+            import certifi
+            os.environ.setdefault("SSL_CERT_FILE", certifi.where())
+        except ImportError:
             pass
     log = watched(os.environ["OPENMUSIC_LOG"]) if os.environ.get("OPENMUSIC_LOG") else None
     app = QApplication(sys.argv)
