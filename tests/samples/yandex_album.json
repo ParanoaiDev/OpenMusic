@@ -1,0 +1,465 @@
+{
+ "invocationInfo": {
+  "req-id": "1795409235215379-4876317546669671902",
+  "hostname": "hostname",
+  "exec-duration-millis": 3
+ },
+ "result": {
+  "id": 3389008,
+  "title": "Amnesiac",
+  "metaType": "music",
+  "year": 2001,
+  "releaseDate": "2001-03-12T00:00:00+03:00",
+  "coverUri": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+  "cover": {
+   "uri": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+   "color": "#1e1e1e"
+  },
+  "ogImage": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+  "genre": "alternative",
+  "metaTagId": "58e3c0796ebb3476087d1902",
+  "trackCount": 11,
+  "likesCount": 13735,
+  "recent": false,
+  "veryImportant": false,
+  "artists": [
+   {
+    "id": 36825,
+    "name": "Radiohead",
+    "various": false,
+    "composer": false,
+    "available": true,
+    "cover": {
+     "type": "from-artist-photos",
+     "uri": "avatars.yandex.net/get-music-content/5314916/561eaa85.p.36825/%%",
+     "prefix": "561eaa85.p.36825/"
+    },
+    "genres": [],
+    "disclaimers": []
+   }
+  ],
+  "labels": [
+   {
+    "id": 13,
+    "name": "XL"
+   }
+  ],
+  "available": true,
+  "availableForPremiumUsers": true,
+  "availableForOptions": [
+   "bookmate"
+  ],
+  "availableForMobile": true,
+  "availablePartially": false,
+  "bests": [
+   333456,
+   333454,
+   333449
+  ],
+  "disclaimers": [],
+  "hasTrailer": true,
+  "trailer": {
+   "available": true
+  },
+  "derivedColors": {
+   "average": "#1e1e1e",
+   "waveText": "#e0e0e0",
+   "miniPlayer": "#b7b7b7",
+   "accent": "#999999"
+  },
+  "customWave": {
+   "title": "Amnesiac",
+   "animationUrl": "https://music-custom-wave-media.s3.yandex.net/base.json",
+   "header": "My Vibe by album",
+   "backgroundImageUrl": "avatars.mds.yandex.net/get-music-misc/28052/custom-wave-default-album-background.image/%%"
+  },
+  "sortOrder": "asc",
+  "volumes": [
+   [
+    {
+     "id": "333442",
+     "realId": "333442",
+     "title": "Packt Like Sardines in a Crushd Tin Box",
+     "major": {
+      "id": 0,
+      "name": "-"
+     },
+     "available": true,
+     "availableForPremiumUsers": true,
+     "availableFullWithoutPermission": false,
+     "availableForOptions": [
+      "bookmate"
+     ],
+     "disclaimers": [],
+     "storageDir": "",
+     "durationMs": 240330,
+     "fileSize": 0,
+     "r128": {
+      "i": -9.2,
+      "tp": 1.31
+     },
+     "fade": {
+      "inStart": 0.4,
+      "inStop": 1.5,
+      "outStart": 237.1,
+      "outStop": 237.3
+     },
+     "previewDurationMs": 30000,
+     "artists": [
+      {
+       "id": 36825,
+       "name": "Radiohead",
+       "various": false,
+       "composer": false,
+       "available": true,
+       "cover": {
+        "type": "from-artist-photos",
+        "uri": "avatars.yandex.net/get-music-content/5314916/561eaa85.p.36825/%%",
+        "prefix": "561eaa85.p.36825/"
+       },
+       "genres": [],
+       "disclaimers": []
+      }
+     ],
+     "albums": [
+      {
+       "id": 3389008,
+       "title": "Amnesiac",
+       "metaType": "music",
+       "year": 2001,
+       "releaseDate": "2001-03-12T00:00:00+03:00",
+       "coverUri": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+       "cover": {
+        "uri": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%"
+       },
+       "ogImage": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+       "genre": "alternative",
+       "trackCount": 11,
+       "likesCount": 13735,
+       "recent": false,
+       "veryImportant": false,
+       "artists": [
+        {
+         "id": 36825,
+         "name": "Radiohead",
+         "various": false,
+         "composer": false,
+         "available": true,
+         "cover": {
+          "type": "from-artist-photos",
+          "uri": "avatars.yandex.net/get-music-content/5314916/561eaa85.p.36825/%%",
+          "prefix": "561eaa85.p.36825/"
+         },
+         "genres": [],
+         "disclaimers": []
+        }
+       ],
+       "labels": [
+        {
+         "id": 13,
+         "name": "XL"
+        }
+       ],
+       "available": true,
+       "availableForPremiumUsers": true,
+       "availableForOptions": [
+        "bookmate"
+       ],
+       "availableForMobile": true,
+       "availablePartially": false,
+       "bests": [
+        333456,
+        333454,
+        333449
+       ],
+       "disclaimers": [],
+       "hasTrailer": false,
+       "trackPosition": {
+        "volume": 1,
+        "index": 1
+       }
+      }
+     ],
+     "coverUri": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+     "derivedColors": {
+      "average": "#1e1e1e",
+      "waveText": "#e0e0e0",
+      "miniPlayer": "#b7b7b7",
+      "accent": "#999999"
+     },
+     "ogImage": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+     "lyricsAvailable": true,
+     "best": false,
+     "type": "music",
+     "rememberPosition": false,
+     "trackSharingFlag": "COVER_ONLY",
+     "lyricsInfo": {
+      "hasAvailableSyncLyrics": true,
+      "hasAvailableTextLyrics": true
+     },
+     "trackSource": "OWN",
+     "specialAudioResources": [
+      "smart_preview"
+     ]
+    },
+    {
+     "id": "333449",
+     "realId": "333449",
+     "title": "Pyramid Song",
+     "major": {
+      "id": 0,
+      "name": "-"
+     },
+     "available": true,
+     "availableForPremiumUsers": true,
+     "availableFullWithoutPermission": false,
+     "availableForOptions": [
+      "bookmate"
+     ],
+     "disclaimers": [],
+     "storageDir": "",
+     "durationMs": 289770,
+     "fileSize": 0,
+     "r128": {
+      "i": -10.29,
+      "tp": 0.3
+     },
+     "fade": {
+      "inStart": 0.1,
+      "inStop": 1.5,
+      "outStart": 281.3,
+      "outStop": 286.3
+     },
+     "previewDurationMs": 30000,
+     "artists": [
+      {
+       "id": 36825,
+       "name": "Radiohead",
+       "various": false,
+       "composer": false,
+       "available": true,
+       "cover": {
+        "type": "from-artist-photos",
+        "uri": "avatars.yandex.net/get-music-content/5314916/561eaa85.p.36825/%%",
+        "prefix": "561eaa85.p.36825/"
+       },
+       "genres": [],
+       "disclaimers": []
+      }
+     ],
+     "albums": [
+      {
+       "id": 3389008,
+       "title": "Amnesiac",
+       "metaType": "music",
+       "year": 2001,
+       "releaseDate": "2001-03-12T00:00:00+03:00",
+       "coverUri": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+       "cover": {
+        "uri": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%"
+       },
+       "ogImage": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+       "genre": "alternative",
+       "trackCount": 11,
+       "likesCount": 13735,
+       "recent": false,
+       "veryImportant": false,
+       "artists": [
+        {
+         "id": 36825,
+         "name": "Radiohead",
+         "various": false,
+         "composer": false,
+         "available": true,
+         "cover": {
+          "type": "from-artist-photos",
+          "uri": "avatars.yandex.net/get-music-content/5314916/561eaa85.p.36825/%%",
+          "prefix": "561eaa85.p.36825/"
+         },
+         "genres": [],
+         "disclaimers": []
+        }
+       ],
+       "labels": [
+        {
+         "id": 13,
+         "name": "XL"
+        }
+       ],
+       "available": true,
+       "availableForPremiumUsers": true,
+       "availableForOptions": [
+        "bookmate"
+       ],
+       "availableForMobile": true,
+       "availablePartially": false,
+       "bests": [
+        333456,
+        333454,
+        333449
+       ],
+       "disclaimers": [],
+       "hasTrailer": false,
+       "trackPosition": {
+        "volume": 1,
+        "index": 2
+       }
+      }
+     ],
+     "coverUri": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+     "derivedColors": {
+      "average": "#1e1e1e",
+      "waveText": "#e0e0e0",
+      "miniPlayer": "#b7b7b7",
+      "accent": "#999999"
+     },
+     "ogImage": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+     "lyricsAvailable": true,
+     "best": true,
+     "type": "music",
+     "rememberPosition": false,
+     "trackSharingFlag": "COVER_ONLY",
+     "lyricsInfo": {
+      "hasAvailableSyncLyrics": false,
+      "hasAvailableTextLyrics": false
+     },
+     "trackSource": "OWN",
+     "specialAudioResources": [
+      "smart_preview"
+     ]
+    },
+    {
+     "id": "333458",
+     "realId": "333458",
+     "title": "Pulk/Pull Revolving Doors",
+     "major": {
+      "id": 0,
+      "name": "-"
+     },
+     "available": true,
+     "availableForPremiumUsers": true,
+     "availableFullWithoutPermission": false,
+     "availableForOptions": [
+      "bookmate"
+     ],
+     "disclaimers": [],
+     "storageDir": "",
+     "durationMs": 247260,
+     "fileSize": 0,
+     "r128": {
+      "i": -8.93,
+      "tp": 1.09
+     },
+     "fade": {
+      "inStart": 0.0,
+      "inStop": 1.5,
+      "outStart": 241.8,
+      "outStop": 246.8
+     },
+     "previewDurationMs": 30000,
+     "artists": [
+      {
+       "id": 36825,
+       "name": "Radiohead",
+       "various": false,
+       "composer": false,
+       "available": true,
+       "cover": {
+        "type": "from-artist-photos",
+        "uri": "avatars.yandex.net/get-music-content/5314916/561eaa85.p.36825/%%",
+        "prefix": "561eaa85.p.36825/"
+       },
+       "genres": [],
+       "disclaimers": []
+      }
+     ],
+     "albums": [
+      {
+       "id": 3389008,
+       "title": "Amnesiac",
+       "metaType": "music",
+       "year": 2001,
+       "releaseDate": "2001-03-12T00:00:00+03:00",
+       "coverUri": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+       "cover": {
+        "uri": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%"
+       },
+       "ogImage": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+       "genre": "alternative",
+       "trackCount": 11,
+       "likesCount": 13735,
+       "recent": false,
+       "veryImportant": false,
+       "artists": [
+        {
+         "id": 36825,
+         "name": "Radiohead",
+         "various": false,
+         "composer": false,
+         "available": true,
+         "cover": {
+          "type": "from-artist-photos",
+          "uri": "avatars.yandex.net/get-music-content/5314916/561eaa85.p.36825/%%",
+          "prefix": "561eaa85.p.36825/"
+         },
+         "genres": [],
+         "disclaimers": []
+        }
+       ],
+       "labels": [
+        {
+         "id": 13,
+         "name": "XL"
+        }
+       ],
+       "available": true,
+       "availableForPremiumUsers": true,
+       "availableForOptions": [
+        "bookmate"
+       ],
+       "availableForMobile": true,
+       "availablePartially": false,
+       "bests": [
+        333456,
+        333454,
+        333449
+       ],
+       "disclaimers": [],
+       "hasTrailer": false,
+       "trackPosition": {
+        "volume": 1,
+        "index": 3
+       }
+      }
+     ],
+     "coverUri": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+     "derivedColors": {
+      "average": "#1e1e1e",
+      "waveText": "#e0e0e0",
+      "miniPlayer": "#b7b7b7",
+      "accent": "#999999"
+     },
+     "ogImage": "avatars.yandex.net/get-music-content/4399834/13c8d84b.a.3389008-2/%%",
+     "lyricsAvailable": true,
+     "best": false,
+     "type": "music",
+     "rememberPosition": false,
+     "trackSharingFlag": "COVER_ONLY",
+     "lyricsInfo": {
+      "hasAvailableSyncLyrics": true,
+      "hasAvailableTextLyrics": true
+     },
+     "trackSource": "OWN",
+     "specialAudioResources": [
+      "smart_preview"
+     ]
+    }
+   ]
+  ],
+  "pager": {
+   "page": 0,
+   "perPage": 11,
+   "total": 11
+  }
+ }
+}

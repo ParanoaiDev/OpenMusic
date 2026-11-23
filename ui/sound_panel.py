@@ -1,0 +1,40 @@
+"""Ready-made scenes of the sound panel (ui/qml/SoundPanel.qml): an equalizer preset with effects,
+set with one press. Each scene first puts every effect back to NEUTRAL and then sets its own, so
+nothing of the scene before lingers. What belongs to the listener and their gear, not to a scene,
+is left alone: preamp, balance, headphones, even loudness, swapped sides."""
+
+NEUTRAL = dict(space=None, space_mix=0.35, orbit=False, orbit_speed=0.12, vinyl=0.0, bass=0.0, treble=0.0, low_cut=0.0,
+               high_cut=0.0, voice=0.0, drive=0.0, crush=0.0, wobble=0.0, chorus=0.0, flanger=0.0, echo=0.0, echo_time=0.32,
+               echo_feedback=0.35, compress=0.0, width=1.0)
+
+SCENES = {
+    "Обычно": dict(about="Как записано", preset="Без изменений", speed=1.0),
+    "Slowed + reverb": dict(about="Медленнее, ниже, в большом зале", preset="Больше баса", space="Зал", space_mix=0.45, speed=0.85),
+    "Nightcore": dict(about="Быстрее и выше", preset="Больше высоких", speed=1.25),
+    "Sped up": dict(about="Чуть быстрее, как в коротких видео", preset="Ярче", speed=1.15),
+    "8D": dict(about="Звук ходит вокруг головы", preset="Без изменений", space="Комната", space_mix=0.3, orbit=True, speed=1.0),
+    "Концерт": dict(about="Сцена и большой зал", preset="Рок", space="Собор", space_mix=0.35, speed=1.0),
+    "Пластинка": dict(about="Треск и тепло винила", preset="Джаз", space="Комната", space_mix=0.2, vinyl=0.6, speed=1.0),
+    "Кассета": dict(about="Плёнка плывёт и греет", preset="Мягче", wobble=0.55, drive=0.35, low_cut=55, high_cut=10500, speed=1.0),
+    "Lo-fi": dict(about="Зернисто, глухо, уютно", preset="Lo-fi", crush=0.3, wobble=0.3, drive=0.25, vinyl=0.3, high_cut=7000, speed=0.95),
+    "Клуб": dict(about="Плотный бас и стены клуба", preset="Танцевальная", bass=0.5, space="Клуб", space_mix=0.28, compress=0.4,
+                 width=1.25, speed=1.0),
+    "Стадион": dict(about="Эхо трибун", preset="Рок", space="Стадион", space_mix=0.5, echo=0.12, echo_time=0.38, speed=1.0),
+    "Кино": dict(about="Широко и объёмно", preset="Кино", space="Зал", space_mix=0.22, width=1.6, bass=0.3, treble=0.3, speed=1.0),
+    "Бас-машина": dict(about="Сабвуфер в багажнике", preset="Глубокий бас", bass=1.0, drive=0.15, compress=0.3, speed=1.0),
+    "Караоке": dict(about="Без голоса — пойте сами", preset="Без изменений", voice=1.0, speed=1.0),
+    "Голос вперёд": dict(about="Слова разборчивее, музыка на шаг назад", preset="Вокал", compress=0.35, width=0.8, speed=1.0),
+    "Широкая сцена": dict(about="Инструменты расходятся по сторонам", preset="Без изменений", width=1.8, space="Студия", space_mix=0.2,
+                          speed=1.0),
+    "Ночь": dict(about="Тихо и ровно, без резких звуков", preset="Ночь", compress=0.7, speed=1.0),
+    "Эхо в горах": dict(about="Звук возвращается слева и справа", preset="Без изменений", echo=0.45, echo_time=0.46,
+                        echo_feedback=0.5, space="Зал", space_mix=0.18, speed=1.0),
+    "Сон": dict(about="Медленно, размыто, далеко", preset="Мягче", chorus=0.6, space="Собор", space_mix=0.45, high_cut=8000, speed=0.9),
+    "Космос": dict(about="Звук закручивается и улетает", preset="Улыбка", flanger=0.7, space="Пещера", space_mix=0.3, width=1.6, speed=1.0),
+    "Под водой": dict(about="Глухо, как из-под воды", preset="Без изменений", high_cut=480, space="Зал", space_mix=0.3, speed=1.0),
+    "За стеной": dict(about="Вечеринка у соседей", preset="Больше баса", high_cut=300, bass=0.5, space="Комната", space_mix=0.35,
+                      width=0.5, speed=1.0),
+    "Старое радио": dict(about="Узкий звук приёмника", preset="Середина", low_cut=320, high_cut=3600, drive=0.5, vinyl=0.2,
+                         width=0.0, speed=1.0),
+    "Телефон": dict(about="Как из трубки", preset="Без изменений", low_cut=420, high_cut=3000, crush=0.3, width=0.0, speed=1.0),
+}

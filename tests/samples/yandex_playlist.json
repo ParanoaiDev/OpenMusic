@@ -1,0 +1,1143 @@
+{
+ "invocationInfo": {
+  "req-id": "1795409474107819-1733937031917296370",
+  "hostname": "hostname",
+  "exec-duration-millis": 196
+ },
+ "result": {
+  "owner": {
+   "uid": 139954184,
+   "login": "music.partners",
+   "name": "Editors' choice",
+   "sex": "female",
+   "verified": true
+  },
+  "playlistUuid": "aaa9ebf3-88b8-ad95-dc28-e7b8641c8b56",
+  "available": true,
+  "uid": 139954184,
+  "kind": 2050,
+  "title": "Best Russian Rock Songs",
+  "description": "Cover: KINO\nClassic hits from the Russian rock scene",
+  "descriptionFormatted": "Cover: KINO<br/>Classic hits from the Russian rock scene",
+  "revision": 190,
+  "snapshot": 268,
+  "trackCount": 3,
+  "visibility": "public",
+  "collective": false,
+  "created": "2018-01-26T13:08:04+00:00",
+  "modified": "2023-12-11T15:54:47+00:00",
+  "backgroundColor": "",
+  "textColor": "#000000",
+  "image": "",
+  "isBanner": false,
+  "isPremiere": false,
+  "durationMs": 35741090,
+  "cover": {
+   "type": "pic",
+   "dir": "/get-music-user-playlist/11407514/139954184.2050.61119/",
+   "version": "1737713561119",
+   "uri": "avatars.yandex.net/get-music-user-playlist/11407514/139954184.2050.61119/%%?1737713561119",
+   "custom": true
+  },
+  "ogImage": "avatars.yandex.net/get-music-user-playlist/11407514/139954184.2050.61119/%%?1737713561119",
+  "tracks": [
+   {
+    "id": 106259,
+    "originalIndex": 0,
+    "timestamp": "2021-11-09T13:19:26+00:00",
+    "track": {
+     "id": "106259",
+     "realId": "38634621",
+     "title": "Группа крови",
+     "major": {
+      "id": 0,
+      "name": "-"
+     },
+     "available": true,
+     "availableForPremiumUsers": true,
+     "availableFullWithoutPermission": false,
+     "availableForOptions": [
+      "bookmate"
+     ],
+     "disclaimers": [],
+     "storageDir": "",
+     "durationMs": 284000,
+     "fileSize": 0,
+     "r128": {
+      "i": -13.66,
+      "tp": -1.11
+     },
+     "fade": {
+      "inStart": 1.1,
+      "inStop": 6.1,
+      "outStart": 275.5,
+      "outStop": 280.5
+     },
+     "previewDurationMs": 30000,
+     "artists": [
+      {
+       "id": 41075,
+       "name": "КИНО",
+       "various": false,
+       "composer": false,
+       "available": true,
+       "cover": {
+        "type": "from-artist-photos",
+        "uri": "avatars.yandex.net/get-music-content/33216/c6d507c7.p.41075/%%",
+        "prefix": "c6d507c7.p.41075/"
+       },
+       "genres": [],
+       "disclaimers": []
+      }
+     ],
+     "albums": [
+      {
+       "id": 10100,
+       "title": "Группа крови",
+       "metaType": "music",
+       "year": 1988,
+       "releaseDate": "1988-01-01T00:00:00+03:00",
+       "coverUri": "avatars.yandex.net/get-music-content/5853241/3fde3856.a.10100-7/%%",
+       "cover": {
+        "uri": "avatars.yandex.net/get-music-content/5853241/3fde3856.a.10100-7/%%"
+       },
+       "ogImage": "avatars.yandex.net/get-music-content/5853241/3fde3856.a.10100-7/%%",
+       "genre": "rusrock",
+       "trackCount": 11,
+       "likesCount": 81131,
+       "recent": false,
+       "veryImportant": false,
+       "artists": [
+        {
+         "id": 41075,
+         "name": "КИНО",
+         "various": false,
+         "composer": false,
+         "available": true,
+         "cover": {
+          "type": "from-artist-photos",
+          "uri": "avatars.yandex.net/get-music-content/33216/c6d507c7.p.41075/%%",
+          "prefix": "c6d507c7.p.41075/"
+         },
+         "genres": [],
+         "disclaimers": []
+        }
+       ],
+       "labels": [
+        {
+         "id": 5468362,
+         "name": "Цой В.Р. (наследники)"
+        }
+       ],
+       "available": true,
+       "availableForPremiumUsers": true,
+       "availableForOptions": [
+        "bookmate"
+       ],
+       "availableForMobile": true,
+       "availablePartially": false,
+       "bests": [
+        38634621,
+        38634622,
+        38634627
+       ],
+       "disclaimers": [],
+       "hasTrailer": false,
+       "backgroundImageUrl": "avatars.mds.yandex.net/get-music-misc/34161/10100.rnd-1905886731.playlist-branding/%%",
+       "trackPosition": {
+        "volume": 1,
+        "index": 1
+       }
+      }
+     ],
+     "coverUri": "avatars.yandex.net/get-music-content/5853241/3fde3856.a.10100-7/%%",
+     "derivedColors": {
+      "average": "#8f663c",
+      "waveText": "#ffe0c1",
+      "miniPlayer": "#d4b79a",
+      "accent": "#c2996f"
+     },
+     "ogImage": "avatars.yandex.net/get-music-content/5853241/3fde3856.a.10100-7/%%",
+     "lyricsAvailable": true,
+     "type": "music",
+     "rememberPosition": false,
+     "trackSharingFlag": "COVER_ONLY",
+     "lyricsInfo": {
+      "hasAvailableSyncLyrics": true,
+      "hasAvailableTextLyrics": true
+     },
+     "trackSource": "OWN",
+     "specialAudioResources": [
+      "karaoke",
+      "smart_preview"
+     ],
+     "substituted": {
+      "id": "106259",
+      "realId": "106259",
+      "title": "Группа крови",
+      "available": false,
+      "availableForPremiumUsers": false,
+      "availableFullWithoutPermission": false,
+      "availableForOptions": [],
+      "disclaimers": [],
+      "storageDir": "",
+      "durationMs": 284000,
+      "fileSize": 0,
+      "r128": {
+       "i": -13.66,
+       "tp": -1.11
+      },
+      "fade": {
+       "inStart": 1.1,
+       "inStop": 6.1,
+       "outStart": 275.5,
+       "outStop": 280.5
+      },
+      "previewDurationMs": 30000,
+      "artists": [
+       {
+        "id": 41075,
+        "name": "КИНО",
+        "various": false,
+        "composer": false,
+        "available": true,
+        "cover": {
+         "type": "from-artist-photos",
+         "uri": "avatars.yandex.net/get-music-content/33216/c6d507c7.p.41075/%%",
+         "prefix": "c6d507c7.p.41075/"
+        },
+        "genres": [],
+        "disclaimers": []
+       }
+      ],
+      "albums": [],
+      "lyricsAvailable": false,
+      "type": "music",
+      "rememberPosition": false,
+      "trackSharingFlag": "COVER_ONLY",
+      "trackSource": "OWN",
+      "error": "no-rights"
+     }
+    },
+    "recent": false,
+    "originalShuffleIndex": 0
+   },
+   {
+    "id": 34942045,
+    "originalIndex": 1,
+    "timestamp": "2023-08-18T06:14:42+00:00",
+    "track": {
+     "id": "34942045",
+     "realId": "34942045",
+     "title": "Утро",
+     "major": {
+      "id": 0,
+      "name": "-"
+     },
+     "available": true,
+     "availableForPremiumUsers": true,
+     "availableFullWithoutPermission": false,
+     "availableForOptions": [
+      "bookmate"
+     ],
+     "disclaimers": [],
+     "storageDir": "",
+     "durationMs": 147000,
+     "fileSize": 0,
+     "r128": {
+      "i": -8.47,
+      "tp": -0.03
+     },
+     "fade": {
+      "inStart": 0.4,
+      "inStop": 1.5,
+      "outStart": 143.8,
+      "outStop": 145.9
+     },
+     "previewDurationMs": 30000,
+     "artists": [
+      {
+       "id": 5054100,
+       "name": "Дайте танк (!)",
+       "various": false,
+       "composer": false,
+       "available": true,
+       "cover": {
+        "type": "from-artist-photos",
+        "uri": "avatars.yandex.net/get-music-content/18132539/3d3b1128.p.5054100/%%",
+        "prefix": "3d3b1128.p.5054100/"
+       },
+       "genres": [],
+       "disclaimers": [],
+       "cutoutCover": {
+        "uri": "avatars.yandex.net/get-music-content/20189877/2628423a.c.991947/%%"
+       }
+      }
+     ],
+     "albums": [
+      {
+       "id": 12348427,
+       "title": "Радио огонь",
+       "metaType": "music",
+       "contentWarning": "explicit",
+       "year": 2016,
+       "releaseDate": "2016-04-24T00:00:00+03:00",
+       "coverUri": "avatars.yandex.net/get-music-content/3318009/5e64f01c.a.12348427-1/%%",
+       "cover": {
+        "uri": "avatars.yandex.net/get-music-content/3318009/5e64f01c.a.12348427-1/%%"
+       },
+       "ogImage": "avatars.yandex.net/get-music-content/3318009/5e64f01c.a.12348427-1/%%",
+       "genre": "local-indie",
+       "trackCount": 7,
+       "likesCount": 24271,
+       "recent": false,
+       "veryImportant": false,
+       "artists": [
+        {
+         "id": 5054100,
+         "name": "Дайте танк (!)",
+         "various": false,
+         "composer": false,
+         "available": true,
+         "cover": {
+          "type": "from-artist-photos",
+          "uri": "avatars.yandex.net/get-music-content/18132539/3d3b1128.p.5054100/%%",
+          "prefix": "3d3b1128.p.5054100/"
+         },
+         "genres": [],
+         "disclaimers": [],
+         "cutoutCover": {
+          "uri": "avatars.yandex.net/get-music-content/20189877/2628423a.c.991947/%%"
+         }
+        }
+       ],
+       "labels": [
+        {
+         "id": 978492,
+         "name": "Дайте танк (!)"
+        }
+       ],
+       "available": true,
+       "availableForPremiumUsers": true,
+       "availableForOptions": [
+        "bookmate"
+       ],
+       "availableForMobile": true,
+       "availablePartially": false,
+       "bests": [
+        34942039,
+        34942045
+       ],
+       "disclaimers": [
+        "explicit",
+        "exclamationIcon:671a23afcec5646906723a52",
+        "descriptionText:67370c8e13b92b0a60256675"
+       ],
+       "hasTrailer": false,
+       "trackPosition": {
+        "volume": 1,
+        "index": 7
+       }
+      }
+     ],
+     "coverUri": "avatars.yandex.net/get-music-content/3318009/5e64f01c.a.12348427-1/%%",
+     "derivedColors": {
+      "average": "#a38628",
+      "waveText": "#fff0c1",
+      "miniPlayer": "#f9da75",
+      "accent": "#f7ca3a"
+     },
+     "ogImage": "avatars.yandex.net/get-music-content/3318009/5e64f01c.a.12348427-1/%%",
+     "lyricsAvailable": false,
+     "type": "music",
+     "rememberPosition": false,
+     "trackSharingFlag": "COVER_ONLY",
+     "lyricsInfo": {
+      "hasAvailableSyncLyrics": true,
+      "hasAvailableTextLyrics": true
+     },
+     "trackSource": "OWN",
+     "specialAudioResources": [
+      "smart_preview"
+     ]
+    },
+    "recent": false,
+    "originalShuffleIndex": 1
+   },
+   {
+    "id": 110219,
+    "originalIndex": 47,
+    "timestamp": "2021-11-09T13:19:26+00:00",
+    "track": {
+     "id": "110219",
+     "realId": "110219",
+     "title": "Москва",
+     "version": "на стихи С. Есенина",
+     "major": {
+      "id": 0,
+      "name": "-"
+     },
+     "available": true,
+     "availableForPremiumUsers": true,
+     "availableFullWithoutPermission": false,
+     "availableForOptions": [
+      "bookmate"
+     ],
+     "disclaimers": [],
+     "storageDir": "",
+     "durationMs": 290340,
+     "fileSize": 0,
+     "r128": {
+      "i": -4.67,
+      "tp": 2.89
+     },
+     "fade": {
+      "inStart": 0.1,
+      "inStop": 1.5,
+      "outStart": 283.8,
+      "outStop": 286.9
+     },
+     "previewDurationMs": 30000,
+     "artists": [
+      {
+       "id": 41122,
+       "name": "Монгол Шуудан",
+       "various": false,
+       "composer": false,
+       "available": true,
+       "cover": {
+        "type": "from-artist-photos",
+        "uri": "avatars.yandex.net/get-music-content/16485602/9dba7e9d.p.41122/%%",
+        "prefix": "9dba7e9d.p.41122/"
+       },
+       "genres": [],
+       "disclaimers": []
+      }
+     ],
+     "albums": [
+      {
+       "id": 10423,
+       "title": "Чересчур",
+       "metaType": "music",
+       "contentWarning": "explicit",
+       "year": 1995,
+       "coverUri": "avatars.yandex.net/get-music-content/49876/68fb48b8.a.10423-1/%%",
+       "cover": {
+        "uri": "avatars.yandex.net/get-music-content/49876/68fb48b8.a.10423-1/%%"
+       },
+       "ogImage": "avatars.yandex.net/get-music-content/49876/68fb48b8.a.10423-1/%%",
+       "genre": "rusrock",
+       "trackCount": 9,
+       "likesCount": 3024,
+       "recent": false,
+       "veryImportant": false,
+       "artists": [
+        {
+         "id": 41122,
+         "name": "Монгол Шуудан",
+         "various": false,
+         "composer": false,
+         "available": true,
+         "cover": {
+          "type": "from-artist-photos",
+          "uri": "avatars.yandex.net/get-music-content/16485602/9dba7e9d.p.41122/%%",
+          "prefix": "9dba7e9d.p.41122/"
+         },
+         "genres": [],
+         "disclaimers": []
+        }
+       ],
+       "labels": [
+        {
+         "id": 61593,
+         "name": "Navigator Records"
+        }
+       ],
+       "available": true,
+       "availableForPremiumUsers": true,
+       "availableForOptions": [
+        "bookmate"
+       ],
+       "availableForMobile": true,
+       "availablePartially": false,
+       "bests": [
+        110225,
+        110219
+       ],
+       "disclaimers": [
+        "explicit",
+        "exclamationIcon:671a23afcec5646906723a52",
+        "descriptionText:67370c8e13b92b0a60256675"
+       ],
+       "hasTrailer": false,
+       "trackPosition": {
+        "volume": 1,
+        "index": 4
+       }
+      }
+     ],
+     "coverUri": "avatars.yandex.net/get-music-content/49876/68fb48b8.a.10423-1/%%",
+     "derivedColors": {
+      "average": "#707070",
+      "waveText": "#e0e0e0",
+      "miniPlayer": "#b7b7b7",
+      "accent": "#999999"
+     },
+     "ogImage": "avatars.yandex.net/get-music-content/49876/68fb48b8.a.10423-1/%%",
+     "lyricsAvailable": true,
+     "type": "music",
+     "rememberPosition": false,
+     "trackSharingFlag": "COVER_ONLY",
+     "lyricsInfo": {
+      "hasAvailableSyncLyrics": true,
+      "hasAvailableTextLyrics": true
+     },
+     "trackSource": "OWN",
+     "specialAudioResources": [
+      "karaoke",
+      "smart_preview"
+     ]
+    },
+    "recent": false,
+    "originalShuffleIndex": 47
+   }
+  ],
+  "tags": [
+   {
+    "id": "5795cf5677d30f7fda41bca5",
+    "value": "90s"
+   },
+   {
+    "id": "5ae445f6cfd69fb3b9cc6dfd",
+    "value": "top"
+   },
+   {
+    "id": "5c11f05b3f9b6400bb442647",
+    "value": "rusrock"
+   },
+   {
+    "id": "5ebeafcd501c1e482a6f9247",
+    "value": "mixofgenres"
+   },
+   {
+    "id": "5795cf1193aee1813dc8e181",
+    "value": "allrock"
+   },
+   {
+    "id": "5795ce8f77d30f7fda41bca0",
+    "value": "classics"
+   }
+  ],
+  "likesCount": 672311,
+  "similarPlaylists": [
+   {
+    "owner": {
+     "uid": 574178821,
+     "login": "ya.musicpop",
+     "name": "Pop dictatorship",
+     "sex": "female",
+     "verified": true
+    },
+    "playlistUuid": "257dd043-dc1b-324c-4c4d-1238cd06407c",
+    "available": true,
+    "uid": 574178821,
+    "kind": 1047,
+    "title": "Pillars of Dream Pop",
+    "description": "Edition [Pitchfork](https://pitchfork.com/features/lists-and-guides/the-30-best-dream-pop-albums/) decided to spend dreampop-retrospective and remember the best albums of this airy and dreamy genre. [Cocteau Twins](/artist/11137), [Mazzy Star](/artist/86326), [M83](/artist/108511), [This Mortal Coil](/artist/677554) and other major groups dreampop in a single set.",
+    "descriptionFormatted": "Edition <a href=\"https://pitchfork.com/features/lists-and-guides/the-30-best-dream-pop-albums/\" target=\"_blank\" rel=\"noopener noreferrer\">Pitchfork</a> decided to spend dreampop-retrospective and remember the best albums of this airy and dreamy genre. <a href=\"/artist/11137\">Cocteau Twins</a>, <a href=\"/artist/86326\">Mazzy Star</a>, <a href=\"/artist/108511\">M83</a>, <a href=\"/artist/677554\">This Mortal Coil</a> and other major groups dreampop in a single set.",
+    "revision": 21,
+    "snapshot": 59,
+    "trackCount": 42,
+    "visibility": "public",
+    "collective": false,
+    "created": "2018-04-17T09:29:33+00:00",
+    "modified": "2018-04-17T10:05:48+00:00",
+    "isBanner": false,
+    "isPremiere": false,
+    "durationMs": 10743430,
+    "cover": {
+     "type": "pic",
+     "dir": "/get-music-user-playlist/10311229/574178821.1047.44318/",
+     "version": "1711990044318",
+     "uri": "avatars.yandex.net/get-music-user-playlist/10311229/574178821.1047.44318/%%?1711990044318",
+     "custom": true
+    },
+    "ogImage": "avatars.yandex.net/get-music-user-playlist/10311229/574178821.1047.44318/%%?1711990044318",
+    "tags": [
+     {
+      "id": "5795cf6a77d30f7fda41bca8",
+      "value": "alternative"
+     },
+     {
+      "id": "5795cf1193aee1813dc8e181",
+      "value": "allrock"
+     }
+    ],
+    "customWave": {
+     "title": "Pillars of Dream Pop",
+     "animationUrl": "https://music-custom-wave-media.s3.yandex.net/base.json",
+     "position": "default",
+     "header": "My Vibe by playlist",
+     "backgroundImageUrl": "avatars.mds.yandex.net/get-music-misc/28052/custom-wave-default-playlist-background.image/%%",
+     "squareAgentAnimation": "https://music-custom-wave-media.music.yandex.net/OLRwjRlyUe"
+    },
+    "derivedColors": {
+     "average": "#9a6273",
+     "waveText": "#ffc1d4",
+     "miniPlayer": "#c7a7b1",
+     "accent": "#af8290"
+    }
+   },
+   {
+    "owner": {
+     "uid": 103372440,
+     "login": "music-blog",
+     "name": "Yandex Music",
+     "sex": "male",
+     "verified": true
+    },
+    "playlistUuid": "64ec45ea-5cb2-5bce-9f31-426586155e6c",
+    "available": true,
+    "uid": 103372440,
+    "kind": 2432,
+    "title": "Chanson Classics",
+    "description": "Cover: Mikhail Krug",
+    "descriptionFormatted": "Cover: Mikhail Krug",
+    "revision": 18,
+    "snapshot": 96,
+    "trackCount": 40,
+    "visibility": "public",
+    "collective": false,
+    "created": "2020-11-09T10:48:06+00:00",
+    "modified": "2022-04-12T09:03:46+00:00",
+    "backgroundColor": "",
+    "textColor": "#000000",
+    "image": "",
+    "isBanner": false,
+    "isPremiere": false,
+    "durationMs": 13821320,
+    "cover": {
+     "type": "pic",
+     "dir": "/get-music-user-playlist/70586/103372440.2432.97845/",
+     "version": "1737713197845",
+     "uri": "avatars.yandex.net/get-music-user-playlist/70586/103372440.2432.97845/%%?1737713197845",
+     "custom": true
+    },
+    "ogImage": "avatars.yandex.net/get-music-user-playlist/70586/103372440.2432.97845/%%?1737713197845",
+    "tags": [
+     {
+      "id": "5eb5bfb1664131413b723412",
+      "value": "russian chanson"
+     },
+     {
+      "id": "5795ce8f77d30f7fda41bca0",
+      "value": "classics"
+     }
+    ],
+    "backgroundImageUrl": "avatars.yandex.net/get-music-user-playlist/11401629/103372440.2432.rnd-1884056835.playlist-branding/%%",
+    "customWave": {
+     "title": "Chanson Classics",
+     "animationUrl": "https://music-custom-wave-media.s3.yandex.net/base.json",
+     "position": "default",
+     "header": "My Vibe by playlist",
+     "backgroundImageUrl": "avatars.mds.yandex.net/get-music-misc/28052/custom-wave-default-playlist-background.image/%%",
+     "squareAgentAnimation": "https://music-custom-wave-media.music.yandex.net/OLRwjRlyUe"
+    },
+    "derivedColors": {
+     "average": "#b73642",
+     "waveText": "#ffc1c7",
+     "miniPlayer": "#dd9198",
+     "accent": "#cf626c"
+    }
+   },
+   {
+    "owner": {
+     "uid": 103372440,
+     "login": "music-blog",
+     "name": "Yandex Music",
+     "sex": "male",
+     "verified": true
+    },
+    "playlistUuid": "10157e57-6c25-baf4-1bc6-fc2a16d50334",
+    "available": true,
+    "uid": 103372440,
+    "kind": 1628,
+    "title": "Sit in the Saddle and Turn Up the Volume!",
+    "description": "When you listen to these songs, and I want to jump on the bike, twist the volume to full and dash away into the sunset",
+    "descriptionFormatted": "When you listen to these songs, and I want to jump on the bike, twist the volume to full and dash away into the sunset",
+    "revision": 201,
+    "snapshot": 305,
+    "trackCount": 100,
+    "visibility": "public",
+    "collective": false,
+    "created": "2017-06-05T11:25:56+00:00",
+    "modified": "2026-11-19T21:00:05+00:00",
+    "backgroundColor": "",
+    "textColor": "#000000",
+    "image": "",
+    "isBanner": false,
+    "isPremiere": false,
+    "durationMs": 41239360,
+    "cover": {
+     "type": "pic",
+     "dir": "/get-music-user-playlist/27701/103372440.1628.52966/",
+     "version": "1701271952966",
+     "uri": "avatars.yandex.net/get-music-user-playlist/27701/103372440.1628.52966/%%?1701271952966",
+     "custom": true
+    },
+    "ogImage": "avatars.yandex.net/get-music-user-playlist/27701/103372440.1628.52966/%%?1701271952966",
+    "tags": [
+     {
+      "id": "5795cfef77d30f7fda41bcbd",
+      "value": "february 23"
+     },
+     {
+      "id": "5795cfac77d30f7fda41bcb2",
+      "value": "driving music"
+     },
+     {
+      "id": "5795cf8777d30f7fda41bcad",
+      "value": "metal"
+     },
+     {
+      "id": "5795cf1193aee1813dc8e181",
+      "value": "allrock"
+     }
+    ],
+    "customWave": {
+     "title": "Sit in the Saddle and Turn Up the Volume!",
+     "animationUrl": "https://music-custom-wave-media.s3.yandex.net/base.json",
+     "position": "default",
+     "header": "My Vibe by playlist",
+     "backgroundImageUrl": "avatars.mds.yandex.net/get-music-misc/28052/custom-wave-default-playlist-background.image/%%",
+     "squareAgentAnimation": "https://music-custom-wave-media.music.yandex.net/OLRwjRlyUe"
+    },
+    "derivedColors": {
+     "average": "#d6605b",
+     "waveText": "#ffc3c1",
+     "miniPlayer": "#ff7570",
+     "accent": "#ff3a33"
+    }
+   },
+   {
+    "owner": {
+     "uid": 103372440,
+     "login": "music-blog",
+     "name": "Yandex Music",
+     "sex": "male",
+     "verified": true
+    },
+    "playlistUuid": "c7ca2704-28ba-a822-cca6-d65c5a549aba",
+    "available": true,
+    "uid": 103372440,
+    "kind": 2058,
+    "title": "Jazz Stars",
+    "revision": 236,
+    "snapshot": 371,
+    "trackCount": 144,
+    "visibility": "public",
+    "collective": false,
+    "created": "2019-02-22T15:30:35+00:00",
+    "modified": "2024-04-26T14:30:18+00:00",
+    "isBanner": false,
+    "isPremiere": false,
+    "durationMs": 47641880,
+    "cover": {
+     "type": "pic",
+     "dir": "/get-music-user-playlist/11401629/103372440.2058.56742/",
+     "version": "1737713156742",
+     "uri": "avatars.yandex.net/get-music-user-playlist/11401629/103372440.2058.56742/%%?1737713156742",
+     "custom": true
+    },
+    "ogImage": "avatars.yandex.net/get-music-user-playlist/11401629/103372440.2058.56742/%%?1737713156742",
+    "tags": [
+     {
+      "id": "5acf59b2cfd69fda2d221523",
+      "value": "jazz"
+     },
+     {
+      "id": "5795ce8f77d30f7fda41bca0",
+      "value": "classics"
+     },
+     {
+      "id": "6a7edcb0bf54446d3dd17f08",
+      "value": "bestofjazz"
+     }
+    ],
+    "backgroundImageUrl": "avatars.yandex.net/get-music-user-playlist/11184076/103372440.2058.rnd-742051600.playlist-branding/%%",
+    "actionButton": {
+     "text": "Top 100 Jazz Songs",
+     "url": "yandexmusic://users/music-blog/playlists/2698",
+     "color": "#ff5353"
+    },
+    "customWave": {
+     "title": "Jazz Stars",
+     "animationUrl": "https://music-custom-wave-media.s3.yandex.net/base.json",
+     "position": "default",
+     "header": "My Vibe by playlist",
+     "backgroundImageUrl": "avatars.mds.yandex.net/get-music-misc/28052/custom-wave-default-playlist-background.image/%%",
+     "squareAgentAnimation": "https://music-custom-wave-media.music.yandex.net/OLRwjRlyUe"
+    },
+    "derivedColors": {
+     "average": "#bb3484",
+     "waveText": "#ffc1e5",
+     "miniPlayer": "#df8fbe",
+     "accent": "#d160a3"
+    }
+   },
+   {
+    "owner": {
+     "uid": 139954184,
+     "login": "music.partners",
+     "name": "Editors' choice",
+     "sex": "female",
+     "verified": true
+    },
+    "playlistUuid": "75ee7690-6495-644e-3dc9-c2690c97fdbe",
+    "available": true,
+    "uid": 139954184,
+    "kind": 1644,
+    "title": "The Best Percussion Parts in History",
+    "revision": 90,
+    "snapshot": 18,
+    "trackCount": 72,
+    "visibility": "public",
+    "collective": false,
+    "created": "2016-06-01T12:46:45+00:00",
+    "modified": "2024-03-18T13:50:30+00:00",
+    "backgroundColor": "",
+    "textColor": "#000000",
+    "image": "",
+    "isBanner": false,
+    "isPremiere": false,
+    "durationMs": 20082470,
+    "cover": {
+     "type": "pic",
+     "dir": "/get-music-user-playlist/59900/139954184.1644.5833/",
+     "version": "1710769805833",
+     "uri": "avatars.yandex.net/get-music-user-playlist/59900/139954184.1644.5833/%%?1710769805833",
+     "custom": true
+    },
+    "ogImage": "avatars.yandex.net/get-music-user-playlist/59900/139954184.1644.5833/%%?1710769805833",
+    "tags": [
+     {
+      "id": "5795cfa477d30f7fda41bcb1",
+      "value": "cool"
+     },
+     {
+      "id": "5795cf1193aee1813dc8e181",
+      "value": "allrock"
+     }
+    ],
+    "customWave": {
+     "title": "The Best Percussion Parts in History",
+     "animationUrl": "https://music-custom-wave-media.s3.yandex.net/base.json",
+     "position": "default",
+     "header": "My Vibe by playlist",
+     "backgroundImageUrl": "avatars.mds.yandex.net/get-music-misc/28052/custom-wave-default-playlist-background.image/%%",
+     "squareAgentAnimation": "https://music-custom-wave-media.music.yandex.net/OLRwjRlyUe"
+    },
+    "derivedColors": {
+     "average": "#52433a",
+     "waveText": "#ffd8c1",
+     "miniPlayer": "#c3b4ab",
+     "accent": "#aa9487"
+    }
+   },
+   {
+    "owner": {
+     "uid": 103372440,
+     "login": "music-blog",
+     "name": "Yandex Music",
+     "sex": "male",
+     "verified": true
+    },
+    "playlistUuid": "45f5110a-c74e-e91d-a12f-bd5032ef13ef",
+    "available": true,
+    "uid": 103372440,
+    "kind": 2235,
+    "title": "Music to Boost Your Courage",
+    "revision": 57,
+    "snapshot": 236,
+    "trackCount": 76,
+    "visibility": "public",
+    "collective": false,
+    "created": "2018-12-27T19:22:09+00:00",
+    "modified": "2026-11-13T05:56:46+00:00",
+    "isBanner": false,
+    "isPremiere": false,
+    "durationMs": 15896170,
+    "cover": {
+     "type": "pic",
+     "dir": "/get-music-user-playlist/59900/103372440.2235.68730/",
+     "version": "1710769468730",
+     "uri": "avatars.yandex.net/get-music-user-playlist/59900/103372440.2235.68730/%%?1710769468730",
+     "custom": true
+    },
+    "ogImage": "avatars.yandex.net/get-music-user-playlist/59900/103372440.2235.68730/%%?1710769468730",
+    "tags": [
+     {
+      "id": "5795cf1d93aee1813dc8e183",
+      "value": "in the mood"
+     },
+     {
+      "id": "5795cfa477d30f7fda41bcb1",
+      "value": "cool"
+     },
+     {
+      "id": "5795cf1193aee1813dc8e181",
+      "value": "allrock"
+     }
+    ],
+    "customWave": {
+     "title": "Music to Boost Your Courage",
+     "animationUrl": "https://music-custom-wave-media.s3.yandex.net/base.json",
+     "position": "default",
+     "header": "My Vibe by playlist",
+     "backgroundImageUrl": "avatars.mds.yandex.net/get-music-misc/28052/custom-wave-default-playlist-background.image/%%",
+     "squareAgentAnimation": "https://music-custom-wave-media.music.yandex.net/OLRwjRlyUe"
+    },
+    "derivedColors": {
+     "average": "#131f49",
+     "waveText": "#c1ceff",
+     "miniPlayer": "#8e9fe0",
+     "accent": "#5e77d3"
+    }
+   },
+   {
+    "owner": {
+     "uid": 103372440,
+     "login": "music-blog",
+     "name": "Yandex Music",
+     "sex": "male",
+     "verified": true
+    },
+    "playlistUuid": "d89a1cab-0c93-f08b-38f6-f40e052b6eb3",
+    "available": true,
+    "uid": 103372440,
+    "kind": 1176,
+    "title": "New Heavy Releases",
+    "description": "Cover: Down\r\nMetal and alternative on full blast",
+    "descriptionFormatted": "Cover: Down<br/>Metal and alternative on full blast",
+    "revision": 2987,
+    "snapshot": 4982,
+    "trackCount": 80,
+    "visibility": "public",
+    "collective": false,
+    "created": "2014-05-12T10:29:27+00:00",
+    "modified": "2026-11-20T10:40:06+00:00",
+    "backgroundColor": "",
+    "textColor": "#000000",
+    "image": "",
+    "isBanner": false,
+    "isPremiere": false,
+    "durationMs": 49261300,
+    "cover": {
+     "type": "pic",
+     "dir": "/get-music-user-playlist/11423738/103372440.1176.9875/",
+     "version": "1795103609875",
+     "uri": "avatars.yandex.net/get-music-user-playlist/11423738/103372440.1176.9875/%%?1795103609875",
+     "custom": true
+    },
+    "ogImage": "avatars.yandex.net/get-music-user-playlist/11423738/103372440.1176.9875/%%?1795103609875",
+    "tags": [
+     {
+      "id": "5bbc9eca5367660064a8cc12",
+      "value": "new_playlists"
+     },
+     {
+      "id": "5795cf6a77d30f7fda41bca8",
+      "value": "alternative"
+     },
+     {
+      "id": "5795cf1193aee1813dc8e181",
+      "value": "allrock"
+     },
+     {
+      "id": "64998efe1651b44a5f14736b",
+      "value": "newsmashinghits"
+     }
+    ],
+    "backgroundImageUrl": "avatars.yandex.net/get-music-user-playlist/11423738/103372440.1176.rnd-668441742.playlist-branding/%%",
+    "actionButton": {
+     "text": "New Metal Hits",
+     "url": "yandexmusic://users/music-blog/playlists/2745",
+     "color": "#ff5353"
+    },
+    "customWave": {
+     "title": "New Heavy Releases",
+     "animationUrl": "https://music-custom-wave-media.s3.yandex.net/base.json",
+     "position": "default",
+     "header": "My Vibe by playlist",
+     "backgroundImageUrl": "avatars.mds.yandex.net/get-music-misc/28052/custom-wave-default-playlist-background.image/%%",
+     "squareAgentAnimation": "https://music-custom-wave-media.music.yandex.net/OLRwjRlyUe"
+    },
+    "derivedColors": {
+     "average": "#24204c",
+     "waveText": "#c7c1ff",
+     "miniPlayer": "#9f9ad4",
+     "accent": "#766fc2"
+    }
+   },
+   {
+    "owner": {
+     "uid": 103372440,
+     "login": "music-blog",
+     "name": "Yandex Music",
+     "sex": "male",
+     "verified": true
+    },
+    "playlistUuid": "c975aaf2-5ba2-7f76-cb9f-42511e554104",
+    "available": true,
+    "uid": 103372440,
+    "kind": 2349,
+    "title": "Russian Rap Classics",
+    "description": "Cover: Kasta\r\n",
+    "descriptionFormatted": "Cover: Kasta<br/>",
+    "revision": 28,
+    "snapshot": 114,
+    "trackCount": 71,
+    "visibility": "public",
+    "collective": false,
+    "created": "2020-06-16T17:23:12+00:00",
+    "modified": "2025-03-13T11:39:09+00:00",
+    "backgroundColor": "",
+    "textColor": "#000000",
+    "image": "",
+    "isBanner": false,
+    "isPremiere": false,
+    "durationMs": 16541250,
+    "cover": {
+     "type": "pic",
+     "dir": "/get-music-user-playlist/10311229/103372440.2349.66714/",
+     "version": "1737712566714",
+     "uri": "avatars.yandex.net/get-music-user-playlist/10311229/103372440.2349.66714/%%?1737712566714",
+     "custom": true
+    },
+    "ogImage": "avatars.yandex.net/get-music-user-playlist/10311229/103372440.2349.66714/%%?1737712566714",
+    "tags": [
+     {
+      "id": "5795ce8f77d30f7fda41bca0",
+      "value": "classics"
+     },
+     {
+      "id": "5c11f0963f9b6400bb442654",
+      "value": "rusrap"
+     },
+     {
+      "id": "5795cf3993aee1813dc8e187",
+      "value": "rap"
+     }
+    ],
+    "backgroundImageUrl": "avatars.yandex.net/get-music-user-playlist/71140/103372440.2349.rnd-1674230068.playlist-branding/%%",
+    "customWave": {
+     "title": "Russian Rap Classics",
+     "animationUrl": "https://music-custom-wave-media.s3.yandex.net/base.json",
+     "position": "default",
+     "header": "My Vibe by playlist",
+     "backgroundImageUrl": "avatars.mds.yandex.net/get-music-misc/28052/custom-wave-default-playlist-background.image/%%",
+     "squareAgentAnimation": "https://music-custom-wave-media.music.yandex.net/OLRwjRlyUe"
+    },
+    "derivedColors": {
+     "average": "#48ae64",
+     "waveText": "#c1ffd2",
+     "miniPlayer": "#99d5aa",
+     "accent": "#6ec385"
+    }
+   },
+   {
+    "owner": {
+     "uid": 103372440,
+     "login": "music-blog",
+     "name": "Yandex Music",
+     "sex": "male",
+     "verified": true
+    },
+    "playlistUuid": "d36c640c-2524-6afe-9d82-aa9471e27c2f",
+    "available": true,
+    "uid": 103372440,
+    "kind": 2479,
+    "title": "Nothing but Techno",
+    "revision": 43,
+    "snapshot": 124,
+    "trackCount": 122,
+    "visibility": "public",
+    "collective": false,
+    "created": "2021-01-25T17:17:50+00:00",
+    "modified": "2025-09-18T09:05:05+00:00",
+    "backgroundColor": "",
+    "textColor": "#000000",
+    "image": "",
+    "isBanner": false,
+    "isPremiere": false,
+    "durationMs": 45669630,
+    "cover": {
+     "type": "pic",
+     "dir": "/get-music-user-playlist/11300361/103372440.2479.83094/",
+     "version": "1737713883094",
+     "uri": "avatars.yandex.net/get-music-user-playlist/11300361/103372440.2479.83094/%%?1737713883094",
+     "custom": true
+    },
+    "ogImage": "avatars.yandex.net/get-music-user-playlist/11300361/103372440.2479.83094/%%?1737713883094",
+    "tags": [
+     {
+      "id": "5ea86d4071ca3b6c946b0ca9",
+      "value": "techno"
+     },
+     {
+      "id": "5795cf2c93aee1813dc8e185",
+      "value": "dance"
+     },
+     {
+      "id": "5795ce8f77d30f7fda41bca0",
+      "value": "classics"
+     }
+    ],
+    "backgroundImageUrl": "avatars.yandex.net/get-music-user-playlist/10311229/103372440.2479.rnd-1047880399.playlist-branding/%%",
+    "customWave": {
+     "title": "Nothing but Techno",
+     "animationUrl": "https://music-custom-wave-media.s3.yandex.net/base.json",
+     "position": "default",
+     "header": "My Vibe by playlist",
+     "backgroundImageUrl": "avatars.mds.yandex.net/get-music-misc/28052/custom-wave-default-playlist-background.image/%%",
+     "squareAgentAnimation": "https://music-custom-wave-media.music.yandex.net/OLRwjRlyUe"
+    },
+    "derivedColors": {
+     "average": "#a38b28",
+     "waveText": "#fff3c1",
+     "miniPlayer": "#ead784",
+     "accent": "#e2c64f"
+    }
+   }
+  ],
+  "backgroundImageUrl": "avatars.yandex.net/get-music-user-playlist/11300679/139954184.2050.rnd-52349829.playlist-branding/%%",
+  "actionButton": {
+   "text": "100 Russian Rock Hits",
+   "url": "yandexmusic://users/music-blog/playlists/1106",
+   "color": "#ff5353"
+  },
+  "customWave": {
+   "title": "Best Russian Rock Songs",
+   "animationUrl": "https://music-custom-wave-media.s3.yandex.net/base.json",
+   "position": "default",
+   "header": "My Vibe by playlist",
+   "backgroundImageUrl": "avatars.mds.yandex.net/get-music-misc/28052/custom-wave-default-playlist-background.image/%%",
+   "squareAgentAnimation": "https://music-custom-wave-media.music.yandex.net/OLRwjRlyUe"
+  },
+  "pager": {
+   "total": 160,
+   "page": 0,
+   "perPage": 160
+  },
+  "hasTrailer": true,
+  "trailer": {
+   "available": true
+  },
+  "derivedColors": {
+   "average": "#524989",
+   "waveText": "#cbc1ff",
+   "miniPlayer": "#a8a1cd",
+   "accent": "#8379b8"
+  }
+ }
+}
