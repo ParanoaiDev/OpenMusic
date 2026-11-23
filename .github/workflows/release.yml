@@ -1,0 +1,138 @@
+# Builds OpenMusic for Linux and Windows. A tag like v0.9.0 also makes a draft release with the files:
+# it is published by hand after the pictures of the check have been looked at.
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  PYTHON: "3.13"
+  # A track the check plays, to see that sound is found and decoded in the build.
+  SMOKE_TRACK: "Монеточка|Каждый раз"
+
+jobs:
+  linux:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON }}
+      - name: Version
+        run: echo "VERSION=$(python packaging/version.py)" >> "$GITHUB_ENV"
+      - name: System libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb libgl1-mesa-dri libegl1 libopengl0 libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 \
+            libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-shape0 libxcb-xinerama0 libxcb-xkb1 \
+            libpulse0 libasound2 libfuse2 file
+      - name: Python packages
+        run: pip install -r requirements.txt pyinstaller
+      - name: Tests
+        run: python -m unittest discover tests
+      - name: Build
+        run: pyinstaller packaging/openmusic.spec --noconfirm
+      - name: Check that the build starts, draws and plays
+        run: |
+          export XDG_DATA_HOME="$RUNNER_TEMP/data" OPENMUSIC_INTRO=0 QT_QPA_PLATFORM=xcb
+          export OPENMUSIC_SMOKE="$PWD/smoke-linux.png" OPENMUSIC_LOG="$PWD/smoke-linux.log" OPENMUSIC_SMOKE_MS=25000
+          export OPENMUSIC_SMOKE_TRACK="$SMOKE_TRACK"
+          xvfb-run -a -s "-screen 0 1600x1000x24" timeout 180 dist/OpenMusic/OpenMusic
+          cat smoke-linux.log
+          test -s smoke-linux.png
+      - name: Archive
+        run: tar -C dist -czf "OpenMusic-$VERSION-linux-x86_64.tar.gz" OpenMusic
+      - name: AppImage
+        run: |
+          mkdir -p AppDir
+          cp -r dist/OpenMusic AppDir/OpenMusic
+          install -m 755 packaging/linux/AppRun AppDir/AppRun
+          cp packaging/linux/OpenMusic.desktop AppDir/OpenMusic.desktop
+          cp assets/icon.png AppDir/OpenMusic.png
+          curl -fsSL -o appimagetool https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
+          chmod +x appimagetool
+          ARCH=x86_64 ./appimagetool --appimage-extract-and-run AppDir "OpenMusic-$VERSION-x86_64.AppImage"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux
+          path: |
+            OpenMusic-*.AppImage
+            OpenMusic-*.tar.gz
+            smoke-linux.png
+            smoke-linux.log
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON }}
+      - name: Version
+        shell: bash
+        run: echo "VERSION=$(python packaging/version.py)" >> "$GITHUB_ENV"
+      - name: Python packages
+        run: pip install -r requirements.txt pyinstaller pillow
+      - name: Tests
+        continue-on-error: true
+        env:
+          PYTHONUTF8: "1"
+        run: python -m unittest discover tests
+      - name: Icon
+        run: python -c "from PIL import Image; Image.open('assets/icon.png').save('packaging/windows/icon.ico', sizes=[(16,16),(24,24),(32,32),(48,48),(64,64),(128,128),(256,256)])"
+      - name: ffmpeg and ffprobe to go with the app
+        continue-on-error: true
+        shell: bash
+        run: |
+          curl -fsSL -o ffmpeg.zip https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-lgpl.zip
+          7z x ffmpeg.zip -offmpeg > /dev/null
+          mkdir -p bin
+          cp ffmpeg/*/bin/ffmpeg.exe ffmpeg/*/bin/ffprobe.exe bin/
+          cp ffmpeg/*/LICENSE.txt bin/FFMPEG-LICENSE.txt
+          ls -la bin
+      - name: Build
+        run: pyinstaller packaging/openmusic.spec --noconfirm
+      - name: Check that the build starts, draws and plays
+        shell: bash
+        run: |
+          export OPENMUSIC_INTRO=0 OPENMUSIC_SMOKE="$PWD/smoke-windows.png" OPENMUSIC_LOG="$PWD/smoke-windows.log" OPENMUSIC_SMOKE_MS=25000
+          export OPENMUSIC_SMOKE_TRACK="$SMOKE_TRACK"
+          timeout 180 dist/OpenMusic/OpenMusic.exe || echo "exit code $?"
+          cat smoke-windows.log || true
+          test -s smoke-windows.png
+      - name: Archive
+        run: Compress-Archive -Path dist/OpenMusic -DestinationPath "OpenMusic-$env:VERSION-windows-x64.zip"
+      - name: Installer
+        run: |
+          choco install innosetup --no-progress -y
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" "/DVersion=$env:VERSION" packaging\windows\OpenMusic.iss
+          Move-Item dist\OpenMusic-*-windows-setup.exe .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: |
+            OpenMusic-*-windows-setup.exe
+            OpenMusic-*-windows-x64.zip
+            smoke-windows.png
+            smoke-windows.log
+
+  release:
+    needs: [linux, windows]
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+      - name: Draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" --draft --title "OpenMusic ${GITHUB_REF_NAME#v}" --notes-file packaging/RELEASE_NOTES.md \
+            out/linux/OpenMusic-*.AppImage out/linux/OpenMusic-*.tar.gz out/windows/OpenMusic-*-windows-setup.exe out/windows/OpenMusic-*-windows-x64.zip
