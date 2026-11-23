@@ -9,6 +9,8 @@ import os
 import re
 import shutil
 import subprocess
+
+import tools
 from concurrent.futures import ThreadPoolExecutor, wait
 from pathlib import Path
 
@@ -42,6 +44,16 @@ def places():
             found += [item for item in base.iterdir() if item.is_dir() and not item.is_symlink()]
         except OSError:
             pass
+    if os.name == "nt":
+        # Windows: the other drives; the system drive is covered by the home folder.
+        home = Path.home().drive.upper()
+        for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
+            drive = Path(f"{letter}:/")
+            try:
+                if f"{letter}:" != home and drive.is_dir():
+                    found.append(drive)
+            except OSError:
+                pass
     unique = []
     for place in found:
         if place.is_dir() and not any(place == other or other in place.parents for other in unique):
@@ -78,7 +90,7 @@ def probe(program, path):
     try:
         done = subprocess.run([program, "-v", "error", "-show_entries",
                                "format=duration,bit_rate:format_tags:stream=codec_type,channels:stream_tags", "-of", "json", str(path)],
-                              capture_output=True, stdin=subprocess.DEVNULL, timeout=20)
+                              capture_output=True, stdin=subprocess.DEVNULL, timeout=20, **tools.QUIET)
         data = json.loads(done.stdout.decode("utf-8", "replace"))
     except (OSError, ValueError, subprocess.TimeoutExpired):
         return None
@@ -134,7 +146,7 @@ def judge(path, info, roots):
 
 def find(roots, cancelled=lambda: False, report=lambda message: None):
     """(tracks, {reason: how many files were left out}, folders with music)."""
-    program = shutil.which("ffprobe")
+    program = tools.program("ffprobe")
     if not program:
         raise ImportFailed("Чтобы отличить треки от звуков, нужна программа ffprobe из пакета ffmpeg. Установите её и повторите.")
     report("Ищу музыку на компьютере…")

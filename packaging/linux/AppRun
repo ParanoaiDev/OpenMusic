@@ -1,0 +1,4 @@
+#!/bin/sh
+# The start of the AppImage: the app itself is the folder PyInstaller made.
+HERE="$(dirname "$(readlink -f "$0")")"
+exec "$HERE/OpenMusic/OpenMusic" "$@"

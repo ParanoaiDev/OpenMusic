@@ -10,6 +10,7 @@ islandOverWindows lifts it to the layer over the windows instead. The library ha
 binding; its one entry point is called through ctypes, and the rest are Qt properties of the
 object it returns. On X11 the island is an ordinary frameless window kept below or above the rest."""
 import ctypes
+import sys
 
 from PySide6.QtCore import Property, QMargins, QObject, Qt, QTimer, Signal, Slot
 from PySide6.QtGui import QGuiApplication, QRegion
@@ -25,7 +26,10 @@ ON_DESKTOP, OVER_WINDOWS = 1, 2
 
 def layer_shell(window):
     """Makes a window, not yet shown, a layer surface centred at the top edge. None when the
-    library is missing."""
+    library is missing. A build of the app carries its own Qt, and the system's library is made for
+    the system's Qt: the two can't live in one process, so a build does not try."""
+    if getattr(sys, "frozen", False):
+        return None
     try:
         library = ctypes.CDLL("libLayerShellQtInterface.so.6")
         get = library._ZN12LayerShellQt6Window3getEP7QWindow
@@ -55,6 +59,7 @@ class Island(QObject):
         self.layer = None
         self.placed = None
         self.available = True
+        self.reason = ""            # why there is no island, for the settings screen
         self.loud = 0.0
         # The beat of the music, 30 times a second while the island shows and something plays.
         self.ticker = QTimer(self)
@@ -68,6 +73,9 @@ class Island(QObject):
         if QGuiApplication.platformName().startswith("wayland"):
             self.layer = layer_shell(window)
             self.available = self.layer is not None
+            if not self.available:
+                self.reason = ("в этой сборке на Wayland недоступен — он есть при запуске из исходников" if getattr(sys, "frozen", False)
+                               else "недоступен: нужен пакет layer-shell-qt")
             self.place()
         else:
             self.place()

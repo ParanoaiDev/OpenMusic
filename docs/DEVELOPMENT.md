@@ -87,3 +87,10 @@ except lyrics.LyricsFailed as error:                      # нет сети, с�
 - `lyrics.parse_lrc(text, duration_ms=None)` разбирает LRC отдельно: метки `[mm:ss.xx]`, несколько меток на строке, `[offset:…]`, пустые метки как паузы, пословные `<mm:ss.xx>`.
 
 Тесты без сети: `python3 -m unittest discover tests` из папки проекта. Импорты проверяются на сохранённых ответах сервисов из `tests/samples`; `tests/test_ui.py` проверяет списки и картинки интерфейса без окна, `tests/test_effects.py` — звуковые эффекты на простых сигналах (тон, щелчок, шум). `tests/test_similar.py` — сравнение имён, разбор названий загрузок, смешивание списков и хранение джемов. `tests/test_choice.py` — выбор загрузки, круги артистов, пропуски.
+
+## Сборки и выпуски
+
+- `packaging/openmusic.spec` — PyInstaller: папка `dist/OpenMusic` со своим Python и Qt (`pyinstaller packaging/openmusic.spec --noconfirm`). В неё идут `ui/qml`, `assets` (со шрифтами Inter и Liberation Serif — в системе их может не быть) и, если есть, папка `bin` с ffmpeg и ffprobe.
+- `.github/workflows/release.yml` — по тегу `vX.Y.Z` собирает на GitHub Linux (Ubuntu 22.04: `.AppImage` и `.tar.gz`) и Windows (установщик Inno Setup `packaging/windows/OpenMusic.iss` и `.zip`) и кладёт файлы в черновик выпуска с текстом из `packaging/RELEASE_NOTES.md`. Версия берётся из `VERSION` в `app.py`.
+- Проверка сборки: с переменной `OPENMUSIC_SMOKE=<файл.png>` приложение через несколько секунд сохраняет снимок окна и выходит; `OPENMUSIC_SMOKE_TRACK="артист|название"` заодно включает трек, `OPENMUSIC_LOG=<файл>` пишет туда предупреждения Qt, ошибки Python и итог (`SMOKE saved=… playing=…`). Снимки и журналы обеих систем лежат в артефактах запуска — их стоит посмотреть перед публикацией черновика.
+- `tools.py` — где искать ffmpeg/ffprobe (сначала `bin` рядом с кодом) и как запускать их в Windows без чёрного окна. В сборке yt-dlp вызывается внутри процесса (`ytdlp.inside`), а системная layer-shell-qt не загружается (у сборки свой Qt), поэтому остров под Wayland в ней выключен.

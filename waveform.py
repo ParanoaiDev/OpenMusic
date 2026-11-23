@@ -5,6 +5,8 @@ import json
 import math
 import shutil
 import subprocess
+
+import tools
 from pathlib import Path
 
 
@@ -25,12 +27,12 @@ def peaks(path, count=220, store=None):
                 return values
         except (OSError, ValueError):
             pass
-    program = shutil.which("ffmpeg")
+    program = tools.program("ffmpeg")
     if not program or not path.exists():
         return None
     try:
         raw = subprocess.run([program, "-v", "error", "-i", str(path), "-ac", "1", "-ar", "4000", "-f", "s16le", "-"],
-                             capture_output=True, timeout=60, check=True).stdout
+                             capture_output=True, timeout=60, check=True, **tools.QUIET).stdout
     except (OSError, subprocess.SubprocessError):
         return None
     try:

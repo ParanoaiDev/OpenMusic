@@ -5,6 +5,7 @@ import json
 import os
 import random
 import sqlite3
+import sys
 import threading
 import time
 from pathlib import Path
@@ -127,7 +128,9 @@ class App(QObject):
                           logo=urls.logo(), logoBig=urls.logo(280), queueCaption="",
                           # The start screen; OPENMUSIC_INTRO=0 opens the window at once.
                           intro=os.environ.get("OPENMUSIC_INTRO", "1") != "0" and self.settings["intro"],
-                          islandAvailable=True, mprisOk=False, stats={}, cache={}, menuEntry=False,
+                          islandAvailable=True, islandWhy="", mprisOk=False, stats={}, cache={}, menuEntry=False,
+                          # A menu entry is a Linux thing; on Windows the installer makes the shortcuts.
+                          menuAvailable=sys.platform.startswith("linux"),
                           cacheChoices=[dict(mb=mb, title=self.size_text(mb * MB)) for mb in CACHE_CHOICES])
         self.player = dict(hasTrack=False, title="Ничего не играет", artist="", caption="Нажмите на трек, чтобы послушать", cover="",
                            colour="#a0a0a0", playing=False, loading=False, liked=False, shuffle=False, repeat="off",
@@ -1080,11 +1083,22 @@ class App(QObject):
     @Slot()
     def addToMenu(self):
         path = self.menu_entry()
+        # What starts the app: the AppImage it runs from, the program of a build, or Python with the code.
+        package = os.environ.get("APPIMAGE")
+        if package:
+            start, where = f'"{package}"', Path(package).parent
+        elif getattr(sys, "frozen", False):
+            start, where = f'"{sys.executable}"', Path(sys.executable).parent
+        else:
+            start, where = f'python3 "{ROOT / "app.py"}"', ROOT
+        # The icon is copied next to the library: inside an AppImage its place changes with every start.
+        icon = self.folder / "icon.png"
         text = "\n".join(["[Desktop Entry]", "Type=Application", "Name=OpenMusic", "GenericName=Музыкальный плеер",
                           "Comment=Ваша музыка из Spotify, SoundCloud и других сервисов",
-                          f'Exec=python3 "{ROOT / "app.py"}"', f"Path={ROOT}", f"Icon={ROOT / 'assets' / 'icon.png'}",
+                          f"Exec={start}", f"Path={where}", f"Icon={icon}",
                           "Terminal=false", "Categories=AudioVideo;Audio;Player;", "StartupWMClass=OpenMusic", ""])
         try:
+            icon.write_bytes((ROOT / "assets" / "icon.png").read_bytes())
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(text, encoding="utf-8")
         except OSError:
@@ -1104,7 +1118,8 @@ class App(QObject):
                 pass
         limit = self.settings["cacheMb"] * MB
         self.update(cache=dict(used=self.size_text(used), share=min(1.0, used / limit) if limit else 0.0, limit=self.size_text(limit)),
-                    stats=self.stats(), menuEntry=self.menu_entry().exists(), islandAvailable=self.island.available)
+                    stats=self.stats(), menuEntry=self.menu_entry().exists(), islandAvailable=self.island.available,
+                    islandWhy=self.island.reason)
 
     def stats(self):
         data = self.userdata

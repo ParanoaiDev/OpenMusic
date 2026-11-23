@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=OpenMusic
+GenericName=Музыкальный плеер
+Comment=Ваша музыка из Spotify, SoundCloud и других сервисов
+Exec=AppRun
+Icon=OpenMusic
+Terminal=false
+Categories=AudioVideo;Audio;Player;
+StartupWMClass=OpenMusic

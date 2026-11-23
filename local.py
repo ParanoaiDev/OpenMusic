@@ -4,6 +4,8 @@ import os
 import re
 import shutil
 import subprocess
+
+import tools
 from concurrent.futures import ThreadPoolExecutor, wait
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -31,7 +33,7 @@ def named(probe):
 def tags(program, path):
     try:
         done = subprocess.run([program, "-v", "error", "-show_entries", "format_tags:stream_tags", "-of", "json", str(path)],
-                              capture_output=True, stdin=subprocess.DEVNULL, timeout=20)
+                              capture_output=True, stdin=subprocess.DEVNULL, timeout=20, **tools.QUIET)
         return named(json.loads(done.stdout.decode("utf-8", "replace")))
     except (OSError, ValueError, subprocess.TimeoutExpired):
         return named({})
@@ -51,7 +53,7 @@ def entry(path, known):
 
 def read(paths, cancelled, report):
     """The tags of each file, in order. Without ffprobe every file comes back untagged."""
-    program = shutil.which("ffprobe")
+    program = tools.program("ffprobe")
     if not program or not paths:
         return [named({}) for _ in paths]
     workers = ThreadPoolExecutor(8)
@@ -70,7 +72,7 @@ def read(paths, cancelled, report):
 
 def folder(path, cancelled=lambda: False, report=lambda message: None):
     """(tracks, files skipped for want of an artist) of the audio files in a folder and the folders inside it."""
-    if not shutil.which("ffprobe"):
+    if not tools.program("ffprobe"):
         raise ImportFailed("Чтобы прочитать теги, нужна программа ffprobe из пакета ffmpeg. Установите её и повторите импорт.")
     if not Path(path).is_dir():
         raise ImportFailed("Выберите папку с музыкой.")

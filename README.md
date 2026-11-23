@@ -4,11 +4,12 @@
 
 # OpenMusic
 
-**Вся твоя музыка в одном плеере для Linux**
+**Вся твоя музыка в одном плеере для Linux и Windows**
 
 Собирает вкус из Spotify, SoundCloud, Deezer, Яндекс Музыки, Apple Music и YouTube по обычной ссылке, сам находит звук, текст и обложки — без аккаунтов, ключей и подписок.
 
 <img alt="Linux: Wayland | X11" src="https://img.shields.io/badge/Linux-Wayland%20%7C%20X11-111111?style=for-the-badge&logo=linux&logoColor=white">
+<img alt="Windows: 10 | 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-111111?style=for-the-badge">
 <img alt="Python: 3.14" src="https://img.shields.io/badge/Python-3.14-111111?style=for-the-badge&logo=python&logoColor=white">
 <img alt="Qt Quick: PySide6 6.12" src="https://img.shields.io/badge/Qt%20Quick-PySide6%206.12-111111?style=for-the-badge&logo=qt&logoColor=white">
 <img alt="тесты: 173 проходят" src="https://img.shields.io/badge/%D1%82%D0%B5%D1%81%D1%82%D1%8B-173%20%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B4%D1%8F%D1%82-2ea44f?style=for-the-badge">
@@ -140,6 +141,18 @@
 <br>
 
 ## 🚀 Установка и запуск
+
+**Готовые сборки** лежат в [релизах](https://github.com/ParanoaiDev/OpenMusic/releases/latest):
+
+| Система | Файл |
+|---|---|
+| **Windows 10/11** | `OpenMusic-…-windows-setup.exe` — установщик, или `…-windows-x64.zip` без установки |
+| **Linux** | `OpenMusic-…-x86_64.AppImage` — сделать исполняемым и запустить, или `…-linux-x86_64.tar.gz` |
+
+Python и Qt в сборках свои, ставить ничего не нужно. В Linux для формы звука и импорта папок пригодится `ffmpeg` из репозитория; в Windows он идёт вместе с приложением. Остров в сборке для Linux работает под X11, а под Wayland — только при запуске из исходников.
+
+### Из исходников
+
 
 Проверено на CachyOS (Arch) с KDE Plasma, Python 3.14 и PySide6 6.12.
 

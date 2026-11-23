@@ -38,7 +38,7 @@ Item {
 
             SettingsCard {
                 title: "Остров"
-                note: page.st.islandAvailable ? "мини-плеер у верхнего края экрана" : "недоступен: нужен пакет layer-shell-qt"
+                note: page.st.islandAvailable ? "мини-плеер у верхнего края экрана" : (page.st.islandWhy || "недоступен: нужен пакет layer-shell-qt")
                 order: 0
                 active: page.active
                 IslandDemo { width: parent.width; running: page.active && page.s.island }
@@ -132,7 +132,8 @@ Item {
                 }
                 Item {
                     width: parent.width
-                    height: Math.max(62, children[0].implicitHeight + 26)
+                    visible: page.st.menuAvailable !== false
+                    height: visible ? Math.max(62, children[0].implicitHeight + 26) : 0
                     Column {
                         anchors.verticalCenter: parent.verticalCenter
                         width: parent.width - 150

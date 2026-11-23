@@ -7,6 +7,12 @@ venv/
 promo/
 
 # Ярлык с путями этого компьютера
-OpenMusic.desktop
+/OpenMusic.desktop
 
 .claude/
+
+# Сборки
+dist/
+build/
+bin/
+packaging/windows/icon.ico

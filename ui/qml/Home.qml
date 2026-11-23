@@ -425,9 +425,11 @@ Rectangle {
         }
     }
 
-    // Shown with an empty library.
+    // Shown with an empty library, under the panel of "Мой поток" (in the middle of the page it
+    // lay over the play button).
     Column {
-        anchors.centerIn: parent
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: Math.round(Math.max(460, Math.min(680, root.height * 0.56))) + 28
         spacing: 16
         visible: home.empty
         z: 50
